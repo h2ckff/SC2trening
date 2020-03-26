@@ -2,12 +2,14 @@
 #include <string>
 #include <random>
 #include <cstdlib>
+#include <conio.h>
 using namespace std;
 
 //Variables used betwen functions
 string input = "";
 string expected = "";
 int points = 0;
+char a;
 
 //Function that generates the character to type
 void generator()
@@ -21,15 +23,16 @@ void generator()
 int main()
 {
   //First text that appers right after compilaton
-  cout<<"SC2traing v.0.1"<<endl<<"To stop enter FIN"<<endl;
+  cout<<"SC2traing v.0.1"<<endl<<"To stop enter ?"<<endl;
   system("pause");
   cout<<endl;
 
 //Main loop where takes place somethings
-  while(input!="fin")
+  while(input!="?")
   {
     generator();
-    cin>>input;
+    a = getch();
+    input = a;
 
     if(input==expected)
     {
