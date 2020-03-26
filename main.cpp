@@ -17,14 +17,14 @@ bool score=0;
 //Function that generates the character to type
 string generator()
 {
-  int i = rand()%36;
-  if(i<10)
+  int i = rand()%35;
+  if(i<9)
   {
-    return to_string(i);
+    return to_string(i+1);
   }
   else
   {
-    tempRan = 'a' + (i - 10);
+    tempRan = 'a' + (i - 9);
     tempStr = tempRan;
     return tempStr;
   }
@@ -34,14 +34,14 @@ string generator()
 int main()
 {
   //First text that appers right after compilaton
-  cout<<"SC2traing v.1.0"<<endl<<"To stop enter ?"<<endl;
+  cout<<"SC2traing v. 1.0"<<endl<<"To stop enter ?"<<endl;
   system("pause");
   cout<<endl;
 
 //Main loop where takes place somethings
   while(input!="?")
   {
-    cout<<"SC2traing v.1.0"<<endl<<"To stop enter ?"<<endl<<endl;
+    cout<<"SC2traing v. 1.0"<<endl<<"To stop enter ?"<<endl<<endl;
 
     if(score == 1)
     {
@@ -71,7 +71,7 @@ int main()
   }
 
   //Ending information and system("pause"), to freeze app
-  cout<<"SC2traing v.1.0"<<endl<<"To stop enter ?"<<endl<<endl;
+  cout<<"SC2traing v. 1.0"<<endl<<"To stop enter ?"<<endl<<endl;
   cout<<"You're done. Your score is equal "<<points<<endl;
   system("pause");
   return 0;
