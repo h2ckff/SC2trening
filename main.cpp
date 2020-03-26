@@ -4,10 +4,12 @@
 #include <cstdlib>
 using namespace std;
 
+//Variables used betwen functions
 string input = "";
 string expected = "";
 int points = 0;
 
+//Function that generates the character to type
 void generator()
 {
   char rnd = 'a' + rand()%24;
@@ -15,10 +17,15 @@ void generator()
   cout<<expected<<endl;
 }
 
+//Main function where takes place most of things
 int main()
 {
-  cout<<"Hellow world";
+  //First text that appers right after compilaton
+  cout<<"SC2traing v.0.1"<<endl<<"To stop enter FIN"<<endl;
+  system("pause");
+  cout<<endl;
 
+//Main loop where takes place somethings
   while(input!="fin")
   {
     generator();
@@ -34,7 +41,11 @@ int main()
       cout<<"You missed";
     }
 
-    cout<<" | Your score: "<<points<<endl;
+    cout<<" | Your score: "<<points<<endl<<endl;
   }
 
+  //Ending information and system("pause"), to freeze app
+  cout<<endl<<endl<<"You're done. Your score is "<<points<<endl;
+  system("pause");
+  return 0;
 }
