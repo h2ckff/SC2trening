@@ -12,22 +12,34 @@ int points = 0;
 char a;
 char tempRan;
 string tempStr;
+string list = "!@#$%^&*(";
 bool score=0;
 
 //Function that generates the character to type
 string generator()
 {
-  int i = rand()%35;
-  if(i<9)
+  int i = rand()%44;
+  if(i<26)
   {
-    return to_string(i+1);
+    tempRan = 'a' + i;
+    tempStr = tempRan;
+    cout<<"\t"<<tempStr<<endl;
+    return tempStr;
+  }
+  else if(i<35)
+  {
+    tempRan = list[i-26];
+    tempStr = tempRan;
+    cout<<"\t"<<i-25<<" + Shift"<<endl;
+    return tempStr;
   }
   else
   {
-    tempRan = 'a' + (i - 9);
-    tempStr = tempRan;
+    tempStr = to_string(i-34);
+    cout<<"\t"<<tempStr<<endl;
     return tempStr;
   }
+
 }
 
 //Main function where takes place most of things
@@ -54,7 +66,6 @@ int main()
     cout<<" | Your score: "<<points<<endl<<endl;
 
     expected = generator();
-    cout<<"\t"<<expected<<endl;
     a = getch();
     input = a;
 
